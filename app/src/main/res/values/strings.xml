@@ -1,0 +1,18 @@
+<resources>
+    <string name="Main_Window">Refuel manager</string>
+    <string name="btn_new_refuel">New Refuel</string>
+    <string name="btn_add">ADD</string>
+    <string name="btn_update">MODIFY</string>
+    <string name="btn_delete">DELETE</string>
+    <string name="btn_backtoMain">Back to the main menu</string>
+    <string name="btn_showall">Show All</string>
+
+    <string name="et_date">DATETIME</string>
+    <string name="et_kilometers">KILOMETERS IN CAR</string>
+    <string name="et_2refuels">KILOMETERS BETWEEN FILLING UP FUEL TANK</string>
+    <string name="et_fuelQuanytity">FUEL QUANTITY</string>
+    <string name="et_price">PRICE OF THE FUEL</string>
+
+    <string name="tx_adtress">REFUEL MANAGER</string>
+
+</resources>

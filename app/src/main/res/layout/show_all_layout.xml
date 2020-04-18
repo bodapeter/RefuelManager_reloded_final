@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:hint="@string/et_date"
+        android:inputType="text"
+        android:id="@+id/showlayout_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:hint="@string/et_date"
+        android:inputType="text"
+        android:id="@+id/showlayout_edit_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+
+        android:id="@+id/showlayout_edit_kilometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_kilometers"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
+
+
+    <EditText
+
+        android:id="@+id/showlayout_edit_2refuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_2refuels"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
+
+    <EditText
+
+        android:id="@+id/showlayout_edit_fuelquantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_fuelQuanytity"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
+
+
+    <EditText
+
+        android:id="@+id/showlayout_edit_pricerefuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_price"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginLeft="2sp">
+
+
+        <Button
+            android:id="@+id/btn_backToMain"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_backtoMain" />
+
+        <Button
+            android:id="@+id/btn_Update"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_update" />
+
+        <Button
+            android:id="@+id/btn_Delete"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/btn_delete" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_marginTop="30dp"
+        android:id="@+id/listViewShowAllRefuel"
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        android:choiceMode="singleChoice">
+
+    </ListView>
+</LinearLayout>
