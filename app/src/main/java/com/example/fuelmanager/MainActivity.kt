@@ -13,6 +13,7 @@ import android.widget.*
 import com.example.fuelmanager.Adapter.RefuelAdapter
 import com.example.fuelmanager.Model.Refuel
 import kotlinx.android.synthetic.main.add_new_refuel_layout.*
+import kotlinx.android.synthetic.main.main_layout.*
 import kotlinx.android.synthetic.main.row_layout.*
 import kotlinx.android.synthetic.main.show_all_layout.*
 import java.lang.Exception
@@ -57,8 +58,8 @@ class MainActivity : AppCompatActivity() {
             Refreshdata()
 
 
-            findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
-            findViewById<View>(R.id.showAllRefuel).visibility = View.VISIBLE
+            findViewById<View>(R.id.includes_layout_addNewRefuelLayout).visibility = View.INVISIBLE
+            findViewById<View>(R.id.incluides_layout_showAllRefuel).visibility = View.VISIBLE
         }
 
         //delete button
@@ -100,21 +101,20 @@ class MainActivity : AppCompatActivity() {
             val refuels = databaseHandler.getAllRefuel()
             val allRefuelListView:ListView = findViewById(R.id.listViewShowAllRefuel)
             //allRefuelListView.adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,refuels)
-            findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
+            findViewById<View>(R.id.includes_starter_layout).visibility = View.INVISIBLE
 
-            findViewById<View>(R.id.showAllRefuel).visibility = View.VISIBLE
+            findViewById<View>(R.id.incluides_layout_showAllRefuel).visibility = View.VISIBLE
         }
 
 
         //skip button
-        val skipnewrefuellayout:Button = findViewById(R.id.btn_new_refuel_layout)
-        skipnewrefuellayout.setOnClickListener()
+        imageB_new_record.setOnClickListener()
         {
             skipTheAddNewRefuelLayout()
         }
 
-        val createDB:Button = findViewById(R.id.btn_createdb)
-        createDB.setOnClickListener()
+        //Create DB
+        btn_createDb.setOnClickListener()
         {
             databaseHandler.createTable("Refuels")
         }
@@ -136,8 +136,8 @@ class MainActivity : AppCompatActivity() {
         //next to new refuel layout button
        fun skipTheAddNewRefuelLayout()
         {
-            findViewById<View>(R.id.addNewRefuelLayout).visibility = View.VISIBLE
-            findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
+            findViewById<View>(R.id.includes_layout_addNewRefuelLayout).visibility = View.VISIBLE
+            findViewById<View>(R.id.includes_starter_layout).visibility = View.INVISIBLE
         }
 
     }
@@ -160,26 +160,26 @@ class MainActivity : AppCompatActivity() {
     }
 
      fun skipTheAddNewRefuelLayout() {
-        findViewById<View>(R.id.addNewRefuelLayout).visibility = View.VISIBLE
-        findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
+        findViewById<View>(R.id.includes_layout_addNewRefuelLayout).visibility = View.VISIBLE
+        findViewById<View>(R.id.includes_starter_layout).visibility = View.INVISIBLE
     }
 
      fun visibilityInit() {
-        findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
-        findViewById<View>(R.id.mainLayout).visibility = View.VISIBLE
-        findViewById<View>(R.id.showAllRefuel).visibility = View.INVISIBLE
+        findViewById<View>(R.id.includes_layout_addNewRefuelLayout).visibility = View.INVISIBLE
+        findViewById<View>(R.id.includes_starter_layout).visibility = View.VISIBLE
+        findViewById<View>(R.id.incluides_layout_showAllRefuel).visibility = View.INVISIBLE
     }
 
     fun showAllRefuelLayout()
     {
-        findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
-        findViewById<View>(R.id.showAllRefuel).visibility = View.VISIBLE
+        findViewById<View>(R.id.includes_starter_layout).visibility = View.INVISIBLE
+        findViewById<View>(R.id.incluides_layout_showAllRefuel).visibility = View.VISIBLE
     }
 
     fun backToMainLayout()
     {
-        findViewById<View>(R.id.addNewRefuelLayout).visibility = View.VISIBLE
-        findViewById<View>(R.id.showAllRefuel).visibility = View.INVISIBLE
+        findViewById<View>(R.id.includes_layout_addNewRefuelLayout).visibility = View.VISIBLE
+        findViewById<View>(R.id.incluides_layout_showAllRefuel).visibility = View.INVISIBLE
     }
 
     fun showToast(message:String)

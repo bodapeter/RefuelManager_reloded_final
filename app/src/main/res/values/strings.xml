@@ -1,10 +1,17 @@
 <resources>
     <string name="Main_Window">Refuel manager</string>
+
+    <string name="myName">Created by: \n Boda Péter</string>
+
+    <string name="welcometext">Welcome my app! \n Use this application \n if you want to monitor your refuel!</string>
+
+    <string name="todo">Alright! \n Write the next datas</string>
+
     <string name="btn_new_refuel">New Refuel</string>
-    <string name="btn_add">ADD</string>
+    <string name="btn_add">Save</string>
     <string name="btn_update">MODIFY</string>
     <string name="btn_delete">DELETE</string>
-    <string name="btn_backtoMain">Back to the main menu</string>
+    <string name="btn_backtoMain">Main Menu</string>
     <string name="btn_showall">Show All</string>
 
     <string name="et_date">DATETIME</string>
@@ -12,6 +19,10 @@
     <string name="et_2refuels">KILOMETERS BETWEEN FILLING UP FUEL TANK</string>
     <string name="et_fuelQuanytity">FUEL QUANTITY</string>
     <string name="et_price">PRICE OF THE FUEL</string>
+
+    <string name="bt_createDb">Create Database</string>
+
+    <string name="idhint">ID</string>
 
     <string name="tx_adtress">REFUEL MANAGER</string>
 

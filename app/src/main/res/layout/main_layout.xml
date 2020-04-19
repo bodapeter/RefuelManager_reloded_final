@@ -1,62 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@android:color/holo_blue_dark"
-    android:id="@+id/main_Layout"
+    android:background="@color/colorBeigle"
+    android:id="@+id/layout_starterLayout"
     >
-
     <TextView
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/Main_Window"
+        android:id="@+id/txt_welcome"
+        android:text="@string/welcometext"
+        android:textStyle="bold"
         android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btn_new_refuel_layout"
-        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:text="@string/btn_new_refuel"
-        android:textSize="30sp"
-        android:layout_margin="50dp"
-        />
+        android:layout_gravity="top|center"
+        android:layout_width="wrap_content" />
 
-    <androidx.constraintlayout.widget.Barrier
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+    <!--
     <Button
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:id="@+id/btn_deldatabase"
+        android:background="@color/colorLightGrey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:onClick="dropTable"
+        android:layout_marginTop="50dp"
         android:text="Del database" />
 
+
+
     <Button
+        android:layout_margin="10dp"
+        android:background="@color/colorLightGrey"
         android:id="@+id/btn_createdb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:onClick="createTable"
         android:text="create database" />
+        -->
 
     <Button
-        android:id="@+id/btn_showAll"
-        android:layout_marginTop="200dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorLightGrey"
+        android:id="@+id/btn_createDb"
         android:text="@string/btn_showall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
 
 
+    <Button
+        android:layout_margin="10dp"
+        android:background="@color/colorLightGrey"
+        android:id="@+id/btn_showAll"
+        android:text="@string/bt_createDb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+
+    <ImageButton
+        android:background="@color/colorBeigle"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/imageB_new_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/miniplus" />
+
+
+</LinearLayout>
