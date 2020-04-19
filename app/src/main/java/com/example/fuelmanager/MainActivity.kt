@@ -7,6 +7,8 @@ import android.os.Bundle
 
 import android.database.sqlite.SQLiteDatabase
 import android.opengl.Visibility
+import android.view.Menu
+import android.view.MenuItem
 
 import android.view.View
 import android.widget.*
@@ -126,7 +128,50 @@ class MainActivity : AppCompatActivity() {
         {
             visibilityInit()
         }
+
+
+
     }
+
+
+
+
+
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when (item?.itemId){
+            R.id.menu_help -> {
+                Toast.makeText(this,"File is secelted",Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.menu_holtankoljak_webPage -> {
+                Toast.makeText(this, "www.holtankoljak.hu", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else ->
+            {
+                Toast.makeText(this, "nice", Toast.LENGTH_SHORT).show()
+                return super.onOptionsItemSelected(item)
+            }
+        }
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+       menuInflater.inflate(R.menu.manu_main,menu)
+        return true
+    }
+
+
+
+
+
+
+
+
+
 
     fun Refreshdata() {
         lstRefuel = databaseHandler.getAllRefuel()
