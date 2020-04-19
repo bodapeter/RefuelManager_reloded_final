@@ -3,6 +3,12 @@ package com.example.fuelmanager.Adapter
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.icu.text.DateFormat
+import android.icu.text.RelativeDateTimeFormatter
+import android.icu.text.SimpleDateFormat
+import android.icu.util.LocaleData
+import android.net.MailTo.parse
+import android.net.Uri.parse
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +18,10 @@ import android.widget.TextView
 import com.example.fuelmanager.Model.Refuel
 import com.example.fuelmanager.R
 import kotlinx.android.synthetic.main.row_layout.view.*
+import java.net.HttpCookie.parse
+import java.util.*
+import java.util.Date.parse
+import java.util.logging.Level.parse
 
 class RefuelAdapter(private val activity:Activity,
                              private val refuelList: List<Refuel>,
@@ -27,19 +37,26 @@ class RefuelAdapter(private val activity:Activity,
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
-        val rowView:View = inflater.inflate(R.layout.row_layout,null)
+        val km : String = " KM"
+        val liter : String = " L"
+        val ft : String = " Ft"
 
+
+
+
+
+         val rowView:View = inflater.inflate(R.layout.row_layout,null)
 
         rowView.txt_row_id.text = refuelList[position].getID().toString()
-        rowView.txt_row_date_now.text = refuelList[position].getDateForRefulling().toString()
-        rowView.txt_row_kilometers.text = refuelList[position].getKilometers().toString()
-        rowView.txt_row_between2refuel.text = refuelList[position].getKilometerBetweenRefuel().toString()
-        rowView.txt_row_fuel_quantity.text = refuelList[position].getFuelQuantity().toString()
-        rowView.txt_price_of_refuel.text = refuelList[position].getPriceOfRefuel().toString()
+        rowView.txt_row_date_now.text = refuelList[position].getDateForRefulling()
+        rowView.txt_row_kilometers.text = refuelList[position].getKilometers().toString() + km
+        rowView.txt_row_between2refuel.text = refuelList[position].getKilometerBetweenRefuel().toString() + km
+        rowView.txt_row_fuel_quantity.text = refuelList[position].getFuelQuantity().toString() + liter
+        rowView.txt_price_of_refuel.text = refuelList[position].getPriceOfRefuel().toString() + ft
 
         rowView.setOnClickListener{
             textViewRefuelID.setText(rowView.txt_row_id .text.toString())
-            edittextDatetime.setText(rowView.txt_row_date_now.text.toString())
+            edittextDatetime.setText( rowView.txt_row_date_now.text.toString())
             edittextKilometers.setText(rowView.txt_row_kilometers.text.toString())
             edittextKilometerbetweenRefuel.setText(rowView.txt_row_between2refuel.text.toString())
             edittextFuelQuantity.setText(rowView.txt_row_fuel_quantity.text.toString())
@@ -47,6 +64,7 @@ class RefuelAdapter(private val activity:Activity,
         }
         return rowView
     }
+
 
     override fun getCount(): Int {
         return refuelList.size

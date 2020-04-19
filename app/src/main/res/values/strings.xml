@@ -14,7 +14,7 @@
     <string name="btn_add">Save it</string>
     <string name="btn_update">MODIFY</string>
     <string name="btn_delete">DELETE</string>
-    <string name="btn_backtoMain">Back to the main menu</string>
+    <string name="btn_backtoMain">Main Menu</string>
     <string name="btn_showall">Show yours records</string>
 
     <string name="et_date">DATETIME</string>
