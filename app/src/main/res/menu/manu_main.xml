@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+   <item
+       android:id="@+id/menu_help"
+       android:title="Help menu"/>
+
+    <item
+        android:id="@+id/menu_holtankoljak_webPage"
+        android:title="Holtankoljak web page"/>
+
+    <item
+        android:id="@+id/menu_open_googleMaps"
+        android:title="Open google maps"/>
+
 </menu>
