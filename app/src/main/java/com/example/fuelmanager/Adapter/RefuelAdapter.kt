@@ -49,10 +49,10 @@ class RefuelAdapter(private val activity:Activity,
 
         rowView.txt_row_id.text = refuelList[position].getID().toString()
         rowView.txt_row_date_now.text = refuelList[position].getDateForRefulling()
-        rowView.txt_row_kilometers.text = refuelList[position].getKilometers().toString() + km
-        rowView.txt_row_between2refuel.text = refuelList[position].getKilometerBetweenRefuel().toString() + km
-        rowView.txt_row_fuel_quantity.text = refuelList[position].getFuelQuantity().toString() + liter
-        rowView.txt_price_of_refuel.text = refuelList[position].getPriceOfRefuel().toString() + ft
+        rowView.txt_row_kilometers.text = refuelList[position].getKilometers().toString()
+        rowView.txt_row_between2refuel.text = refuelList[position].getKilometerBetweenRefuel().toString()
+        rowView.txt_row_fuel_quantity.text = refuelList[position].getFuelQuantity().toString()
+        rowView.txt_price_of_refuel.text = refuelList[position].getPriceOfRefuel().toString()
 
         rowView.setOnClickListener{
             textViewRefuelID.setText(rowView.txt_row_id .text.toString())
