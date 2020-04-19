@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGrey">
+
+    <!-- Don't worry about the id names I have named the id's with reference to the file name for consistency -->
+
+    <ImageView
+        android:id="@+id/tankoloalomas"
+        android:layout_weight="2"
+        android:layout_gravity="top|center"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/car"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Main_Window"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@id/tankoloalomas"
+        android:padding="30dp"/>
+
+    <ProgressBar
+        android:id="@+id/prograss_loading"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:indeterminateTint="@color/colorBlack"/>
+
+    <TextView
+        android:id="@+id/txt_myname"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:padding="15dp"
+        android:text="@string/myName"
+        android:textColor="@color/colorBlack"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+</LinearLayout>
