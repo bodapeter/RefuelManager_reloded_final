@@ -35,14 +35,13 @@ class MainActivity : AppCompatActivity() {
 
         //first visitibility
         visibilityInit()
-
-
+        //up to date the database
         Refreshdata()
 
 
-        //add button
-        //val addButton: Button = findViewById(R.id.btn_add)
-        btn_add.setOnClickListener()
+        //save it button
+        val saveRecordInDB: Button = findViewById(R.id.btn_saveRecord)
+        saveRecordInDB.setOnClickListener()
         {
 
 
@@ -56,14 +55,20 @@ class MainActivity : AppCompatActivity() {
             databaseHandler.addRefuel(refuel)
             Refreshdata()
 
-
             findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
             findViewById<View>(R.id.showAllRefuel).visibility = View.VISIBLE
         }
 
+        //drop it button
+        val dropRecordFromBlank: Button = findViewById(R.id.btn_dropRecord)
+        dropRecordFromBlank.setOnClickListener()
+        {
+            visibilityInit()
+        }
+
+
         //delete button
         val deleteButton: Button = findViewById(R.id.btn_Delete)
-
         deleteButton.setOnClickListener {
             val refuel = Refuel(
                 showlayout_edit_date.text.toString(),
@@ -107,8 +112,8 @@ class MainActivity : AppCompatActivity() {
 
 
         //skip button
-        val skipnewrefuellayout:Button = findViewById(R.id.btn_new_refuel_layout)
-        skipnewrefuellayout.setOnClickListener()
+        val showYourRecords:ImageButton = findViewById(R.id.btn_new_refuel_layout)
+        showYourRecords.setOnClickListener()
         {
             skipTheAddNewRefuelLayout()
         }
@@ -126,12 +131,12 @@ class MainActivity : AppCompatActivity() {
             visibilityInit()
         }
 
-        //back button from add layout
+        /*//back button from add layout
         val backToMainFromShowLayout:Button = findViewById(R.id.btn_backToMainFromTheAddLayout)
         backToMainFromShowLayout.setOnClickListener()
         {
             visibilityInit()
-        }
+        }*/
 
         //next to new refuel layout button
        fun skipTheAddNewRefuelLayout()

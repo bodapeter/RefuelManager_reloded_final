@@ -7,7 +7,7 @@
 
     <include
         android:id="@+id/mainLayout"
-        layout="@layout/main_layout"
+        layout="@layout/starter_layout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 

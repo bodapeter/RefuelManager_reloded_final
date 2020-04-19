@@ -4,15 +4,18 @@
 
     <string name="welcometext">Welcome my app! \n Use this application \n if you want to monitor your refuel!</string>
 
-    <string name="todo">Alright! \n Write the next datas</string>
+    <string name="todo">Alright! \n To fill in the blank</string>
+
+    <string name="btn_createDB">Create Database</string>
+    <string name="btn_deleteDB">Delete Database</string>
 
 
-    <string name="btn_new_refuel">New Refuel</string>
-    <string name="btn_add">ADD</string>
+    <string name="btn_new_refuel">New refuel</string>
+    <string name="btn_add">Save it</string>
     <string name="btn_update">MODIFY</string>
     <string name="btn_delete">DELETE</string>
     <string name="btn_backtoMain">Back to the main menu</string>
-    <string name="btn_showall">Show All</string>
+    <string name="btn_showall">Show yours records</string>
 
     <string name="et_date">DATETIME</string>
     <string name="et_kilometers">KILOMETERS IN CAR</string>
@@ -21,5 +24,8 @@
     <string name="et_price">PRICE OF THE FUEL</string>
 
     <string name="tx_adtress">REFUEL MANAGER</string>
+    <string name="tx_idhint">Id</string>
+
+    <string name="btn_dontSaveRecord">Drop it</string>
 
 </resources>
