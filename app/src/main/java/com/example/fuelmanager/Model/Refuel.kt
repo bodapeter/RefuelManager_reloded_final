@@ -12,18 +12,18 @@ import kotlin.math.roundToInt
 
 class Refuel(
 
-    var dateForRefuelling:String,
-    var kiloMeter:Double,
-    var kilometerbetweenRefuel:Double,
-    var fuelQuantity:Double,
-    var priceOfRefuel:Double,
-    var Id:Int = 0):Serializable
+        var dateForRefuelling:String,
+        var kiloMeter:Double,
+        var kilometerbetweenRefuel:Double,
+        var fuelQuantity:Double,
+        var priceOfRefuel:Double,
+        var Id:Int = 0):Serializable
 
-{
+        {
 
-    fun getID():Int
-    {
-        return Id
+            fun getID():Int
+            {
+                return Id
     }
 
     fun getDateForRefulling():String

@@ -41,10 +41,6 @@ class RefuelAdapter(private val activity:Activity,
         val liter : String = " L"
         val ft : String = " Ft"
 
-
-
-
-
          val rowView:View = inflater.inflate(R.layout.row_layout,null)
 
         rowView.txt_row_id.text = refuelList[position].getID().toString()
