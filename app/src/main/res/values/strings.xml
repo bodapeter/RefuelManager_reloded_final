@@ -6,9 +6,16 @@
 
     <string name="todo">Alright! \n To fill in the blank</string>
 
+    <string name="tx_helpmenu1">This is help menu \n I can help you how to use \n Refuel manager app</string>
+    <string name="tx_helpFirst">1. Create Database</string>
+    <string name="tx_helpSecond">2. Add new Refuel Record</string>
+    <string name="tx_helpThird">3. Monitor yor records</string>
+    <string name="tx_helpForth">4. Use it in good health</string>
+    <string name="tx_helpFifth">5. Drive carefully</string>
+    <string name="tx_helpDelete">You find Delete Database button, \n By pressing this button you can delete the all record, \n which you have added before.   </string>
+
     <string name="btn_createDB">Create Database</string>
     <string name="btn_deleteDB">Delete Database</string>
-
 
     <string name="btn_new_refuel">New refuel</string>
     <string name="btn_add">Save it</string>
