@@ -1,11 +1,16 @@
 package com.example.fuelmanager
 
+import android.annotation.SuppressLint
+import android.app.SearchManager
+import android.content.Context
+import android.content.Intent
 import com.example.fuelmanager.DataBaseHelper.DBHelper
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 import android.database.sqlite.SQLiteDatabase
+import android.net.Uri
 import android.opengl.Visibility
 import android.view.Menu
 import android.view.MenuItem
@@ -14,6 +19,7 @@ import android.view.View
 import android.widget.*
 import com.example.fuelmanager.Adapter.RefuelAdapter
 import com.example.fuelmanager.Model.Refuel
+import com.example.fuelmanager.R.id.layout_helpMenu
 import kotlinx.android.synthetic.main.add_new_refuel_layout.*
 import kotlinx.android.synthetic.main.row_layout.*
 import kotlinx.android.synthetic.main.show_all_layout.*
@@ -129,30 +135,53 @@ class MainActivity : AppCompatActivity() {
             visibilityInit()
         }
 
-
-
+        val backToMainFromHelp:Button = findViewById(R.id.btn_backtoMainFromHelp)
+        backToMainFromHelp.setOnClickListener()
+        {
+            visibilityInit()
+        }
     }
 
+    fun helpMenuVisibility()
+    {
+        findViewById<View>(R.id.helpmenu).visibility = View.VISIBLE
+        findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
+        findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
+        findViewById<View>(R.id.showAllRefuel).visibility = View.INVISIBLE
+    }
 
-
-
-
+    /*fun openNewTabWindow(urls: String, context : Context) {
+        val uris = Uri.parse(urls)
+        val intents = Intent(Intent.ACTION_VIEW, uris)
+        val b = Bundle()
+        b.putBoolean("new_window", true)
+        intents.putExtras(b)
+        context.startActivity(intents)
+    }*/
 
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
+        var intent: Intent? = null
         return when (item?.itemId){
             R.id.menu_help -> {
-                Toast.makeText(this,"File is secelted",Toast.LENGTH_SHORT).show()
+               helpMenuVisibility()
                 true
             }
             R.id.menu_holtankoljak_webPage -> {
-                Toast.makeText(this, "www.holtankoljak.hu", Toast.LENGTH_SHORT).show()
+                val urls:String = "https://holtankoljak.hu/arvaltozasok"
+                val uris = Uri.parse(urls)
+                intent = Intent(Intent.ACTION_VIEW,uris)
+                startActivity(intent)
+
                 true
             }
             else ->
             {
-                Toast.makeText(this, "nice", Toast.LENGTH_SHORT).show()
+                /*val uri:Uri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
+                intent = Intent(Intent.ACTION_VIEW,uri)
+                intent.setPackage()
+                */
                 return super.onOptionsItemSelected(item)
             }
         }
@@ -196,7 +225,8 @@ class MainActivity : AppCompatActivity() {
     }
 
      fun visibilityInit() {
-        findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
+         findViewById<View>(R.id.helpmenu).visibility = View.INVISIBLE
+         findViewById<View>(R.id.addNewRefuelLayout).visibility = View.INVISIBLE
         findViewById<View>(R.id.mainLayout).visibility = View.VISIBLE
         findViewById<View>(R.id.showAllRefuel).visibility = View.INVISIBLE
     }
