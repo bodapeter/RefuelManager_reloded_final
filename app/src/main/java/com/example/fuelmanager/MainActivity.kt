@@ -16,6 +16,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import com.example.fuelmanager.Adapter.RefuelAdapter
 import com.example.fuelmanager.Model.Refuel
@@ -141,6 +142,12 @@ class MainActivity : AppCompatActivity() {
         {
             visibilityInit()
         }
+
+        fun View.hideKeyboard() {
+            val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(windowToken, 0)
+        }
+
     }
 
     fun helpMenuVisibility()
@@ -150,16 +157,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.mainLayout).visibility = View.INVISIBLE
         findViewById<View>(R.id.showAllRefuel).visibility = View.INVISIBLE
     }
-
-    /*fun openNewTabWindow(urls: String, context : Context) {
-        val uris = Uri.parse(urls)
-        val intents = Intent(Intent.ACTION_VIEW, uris)
-        val b = Bundle()
-        b.putBoolean("new_window", true)
-        intents.putExtras(b)
-        context.startActivity(intents)
-    }*/
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -190,13 +187,6 @@ class MainActivity : AppCompatActivity() {
        menuInflater.inflate(R.menu.manu_main,menu)
         return true
     }
-
-
-
-
-
-
-
 
 
 

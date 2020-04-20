@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -15,8 +14,7 @@
     android:orientation="vertical"
     android:background="@color/colorBeigle"
     tools:context=".MainActivity"
-    android:id="@+id/linearLayout"
-    >
+    android:id="@+id/linearLayout">
 
     <TextView
         android:textColor="@color/colorBlack"
@@ -123,15 +121,8 @@
            android:layout_height="wrap_content"
            android:text="@string/btn_add"
            android:textSize="20sp"
-           android:background="@color/colorLightGrey"
-           />
-
+           android:background="@color/colorLightGrey" />
 
    </LinearLayout>
-
-
-
-
-
 </LinearLayout>
 </ScrollView>

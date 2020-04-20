@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
     android:background="@color/colorBeigle"
     android:layout_width="match_parent"

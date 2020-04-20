@@ -23,7 +23,7 @@
             android:id="@+id/txt_row_date_now"
             android:layout_width="10dp"
             android:layout_height="54dp"
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="Date" />
 
@@ -31,7 +31,7 @@
         <TextView
             android:id="@+id/txt_row_kilometers"
             android:text="0"
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
@@ -39,7 +39,7 @@
         <TextView
             android:id="@+id/txt_row_between2refuel"
             android:text="0"
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
@@ -47,7 +47,7 @@
         <TextView
             android:id="@+id/txt_row_fuel_quantity"
             android:text="0"
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
@@ -55,15 +55,9 @@
         <TextView
             android:id="@+id/txt_price_of_refuel"
             android:text="0"
-            android:layout_marginLeft="10sp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
-
-
-        
     </LinearLayout>
-
-
-
 </LinearLayout>

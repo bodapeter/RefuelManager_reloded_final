@@ -1,12 +1,15 @@
 package com.example.fuelmanager
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -42,6 +45,11 @@ class MapsActivity() : AppCompatActivity(), OnMapReadyCallback,  OnMarkerClickLi
         mapFragment.getMapAsync(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
+        fun View.hideKeyboard() {
+            val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(windowToken, 0)
+        }
 
     }
 
@@ -83,8 +91,6 @@ class MapsActivity() : AppCompatActivity(), OnMapReadyCallback,  OnMarkerClickLi
         mMap.addMarker(markerOptions)
     }
     override fun onMarkerClick(p0: Marker?) = false
-
-
 }
 
 
