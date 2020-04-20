@@ -28,4 +28,9 @@
 
     <string name="btn_dontSaveRecord">Drop it</string>
 
+    <string name="helpMenu">Help Menu</string>
+    <string name="webpage">holtankoljak.hu</string>
+    <string name="webUrl">https://holtankoljak.hu/arvaltozasok</string>
+    <string name="googleMaps">Google Maps</string>
+
 </resources>

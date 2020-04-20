@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 
-   <item
+    tools:context="example.javatpoint.com.kotlinoptionsmenu.MainActivity">
+
+<item
        android:id="@+id/menu_help"
-       android:title="Help menu"/>
+       android:title="@string/helpMenu"/>
 
     <item
         android:id="@+id/menu_holtankoljak_webPage"
-        android:title="Holtankoljak web page"/>
+        android:title="@string/webpage"/>
 
     <item
         android:id="@+id/menu_open_googleMaps"
-        android:title="Open google maps"/>
+        android:title="@string/googleMaps"/>
 
 </menu>
