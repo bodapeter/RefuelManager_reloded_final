@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@color/colorBeigle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout
     android:id="@+id/layout_showAllrecord"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@color/colorBeigle"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+
+
+
 
     <TextView
 
@@ -111,3 +120,4 @@
     </ListView>
 
 </LinearLayout>
+</ScrollView>
