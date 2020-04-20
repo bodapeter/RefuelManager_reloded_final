@@ -24,6 +24,7 @@ import kotlinx.android.synthetic.main.add_new_refuel_layout.*
 import kotlinx.android.synthetic.main.row_layout.*
 import kotlinx.android.synthetic.main.show_all_layout.*
 import java.lang.Exception
+import com.example.fuelmanager.MapsActivity
 
 import java.time.LocalDateTime
 
@@ -178,9 +179,10 @@ class MainActivity : AppCompatActivity() {
             }
             else ->
             {
-                /*val uri:Uri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
+                val uri:Uri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
                 intent = Intent(Intent.ACTION_VIEW,uri)
-                intent.setPackage()*/
+                intent.setPackage("com.google.android.apps.maps")
+                startActivity(intent)
 
                 return super.onOptionsItemSelected(item)
             }
