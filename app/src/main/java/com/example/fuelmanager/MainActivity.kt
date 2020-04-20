@@ -179,11 +179,7 @@ class MainActivity : AppCompatActivity() {
             }
             else ->
             {
-                val uri:Uri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
-                intent = Intent(Intent.ACTION_VIEW,uri)
-                intent.setPackage("com.google.android.apps.maps")
-                startActivity(intent)
-
+                startActivity(Intent(this,MapsActivity::class.java))
                 return super.onOptionsItemSelected(item)
             }
         }

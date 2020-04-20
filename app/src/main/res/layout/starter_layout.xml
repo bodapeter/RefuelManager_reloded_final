@@ -12,23 +12,21 @@
     >
 
 
-
-
     <TextView
         android:id="@+id/txt_welcome"
         android:text="@string/welcometext"
         android:textStyle="bold"
         android:textSize="30sp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_weight="3"
         android:layout_gravity="top|center"
         android:gravity="center"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_width="wrap_content" />
 
 
 
     <Button
+        android:textColor="@color/colorRed"
         android:id="@+id/btn_deldatabase"
         android:textSize="20dp"
         android:background="@color/colorLightGrey"
@@ -59,7 +57,7 @@
         android:layout_height="wrap_content"/>
 
     <ImageButton
-        android:layout_weight="2"
+
         android:id="@+id/btn_new_refuel_layout"
         android:background="@color/colorBeigle"
         android:layout_width="wrap_content"

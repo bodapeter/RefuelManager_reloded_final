@@ -11,4 +11,5 @@
     <color name="colorOrangeaccent">#FF9800</color>
     <color name="colorIndigo">#303F9F</color>
     <color name="colorLightGrey">#BDBDBD</color>
+    <color name="colorRed">#b71c1c</color>
 </resources>
