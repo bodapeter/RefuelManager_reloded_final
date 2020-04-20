@@ -180,8 +180,8 @@ class MainActivity : AppCompatActivity() {
             {
                 /*val uri:Uri = Uri.parse("google.streetview:cbll=46.414382,10.013988")
                 intent = Intent(Intent.ACTION_VIEW,uri)
-                intent.setPackage()
-                */
+                intent.setPackage()*/
+
                 return super.onOptionsItemSelected(item)
             }
         }

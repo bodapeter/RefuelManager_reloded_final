@@ -39,5 +39,6 @@
     <string name="webpage">holtankoljak.hu</string>
     <string name="webUrl">https://holtankoljak.hu/arvaltozasok</string>
     <string name="googleMaps">Google Maps</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
